@@ -3,7 +3,7 @@ package br.senai.sc.sisloja.modelo;
 public class Cliente {
     
     private int codcli;
-    private String nomecli;
+    private String nomcli;
     private String endcli;
     private String baicli;
     private String comcli;
@@ -18,12 +18,12 @@ public class Cliente {
         this.codcli = codcli;
     }
 
-    public String getNomecli() {
-        return nomecli;
+    public String getNomcli() {
+        return nomcli;
     }
 
-    public void setNomecli(String nomecli) {
-        this.nomecli = nomecli;
+    public void setNomcli(String nomecli) {
+        this.nomcli = nomecli;
     }
 
     public String getEndcli() {
