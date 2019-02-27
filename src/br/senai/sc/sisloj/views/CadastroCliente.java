@@ -21,6 +21,8 @@ public class CadastroCliente extends javax.swing.JPanel {
     /**
      * Creates new form CadastroCliente
      */
+    
+    
     public CadastroCliente() {
         initComponents();
         String cpNome = "";
@@ -77,6 +79,12 @@ public class CadastroCliente extends javax.swing.JPanel {
         lblCel.setFont(new java.awt.Font("Gadugi", 0, 14)); // NOI18N
         lblCel.setText("Celular:");
 
+        cpNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cpNomeActionPerformed(evt);
+            }
+        });
+
         try {
             cpCep.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
         } catch (java.text.ParseException ex) {
@@ -94,6 +102,12 @@ public class CadastroCliente extends javax.swing.JPanel {
             ex.printStackTrace();
         }
 
+        cpCom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cpComActionPerformed(evt);
+            }
+        });
+
         btnSalvar.setFont(new java.awt.Font("Gadugi", 0, 12)); // NOI18N
         btnSalvar.setText("SALVAR");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -109,27 +123,19 @@ public class CadastroCliente extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lclCom)
+                                .addComponent(lblNome)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cpCom, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE))
+                                .addComponent(cpNome))
                             .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblNome)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(cpNome))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblEnd)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(cpEnd))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(127, 127, 127)
-                                .addComponent(jLabel2)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(lblEnd)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cpEnd))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(127, 127, 127)
+                        .addComponent(jLabel2))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnSalvar))
@@ -137,9 +143,13 @@ public class CadastroCliente extends javax.swing.JPanel {
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(lclCom)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cpCom, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblBai)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cpBai))
+                                .addComponent(cpBai, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE))
                             .addComponent(jSeparator1)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lclCep)
@@ -158,17 +168,18 @@ public class CadastroCliente extends javax.swing.JPanel {
                 .addComponent(jLabel2)
                 .addGap(5, 5, 5)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(cpNome, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2))
-                    .addComponent(lblNome))
+                        .addGap(4, 4, 4)
+                        .addComponent(lblNome))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(cpNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblEnd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cpEnd))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblBai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cpBai))
@@ -181,7 +192,7 @@ public class CadastroCliente extends javax.swing.JPanel {
                     .addComponent(cpCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lclCep)
                     .addComponent(lblCel)
-                    .addComponent(cpCel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cpCel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addComponent(btnSalvar)
                 .addGap(41, 41, 41))
@@ -217,8 +228,26 @@ public class CadastroCliente extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Falha ao inserir o cliente!");
             Logger.getLogger(CadastroCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+       
+        //LIMPAR CAMPOS
+        cpNome.setText("");
+        cpEnd.setText("");
+        cpBai.setText("");
+        cpCom.setText("");
+        cpCep.setText("");
+        cpCel.setText("");
+
 
     }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void cpNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cpNomeActionPerformed
+
+    private void cpComActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpComActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cpComActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

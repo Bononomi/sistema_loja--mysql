@@ -19,34 +19,23 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lclCom" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblNome" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="cpCom" pref="266" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblNome" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="cpNome" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblEnd" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="cpEnd" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="cpNome" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblEnd" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="cpEnd" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -55,10 +44,15 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lclCom" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="cpCom" pref="300" max="32767" attributes="0"/>
+                          </Group>
                           <Group type="102" attributes="0">
                               <Component id="lblBai" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="cpBai" max="32767" attributes="0"/>
+                              <Component id="cpBai" pref="355" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jSeparator1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
@@ -84,20 +78,22 @@
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="cpNome" min="-2" pref="19" max="-2" attributes="0"/>
-                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="lblNome" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="lblNome" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Component id="cpNome" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="lblEnd" max="32767" attributes="0"/>
                   <Component id="cpEnd" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="lblBai" max="32767" attributes="0"/>
                   <Component id="cpBai" max="32767" attributes="0"/>
@@ -112,7 +108,7 @@
                   <Component id="cpCep" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lclCep" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblCel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cpCel" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="cpCel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Component id="btnSalvar" min="-2" max="-2" attributes="0"/>
@@ -181,6 +177,9 @@
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
     <Component class="javax.swing.JTextField" name="cpNome">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cpNomeActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="cpEnd">
     </Component>
@@ -204,6 +203,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="cpCom">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cpComActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSalvar">
       <Properties>
