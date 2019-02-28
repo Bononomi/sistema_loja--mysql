@@ -7,6 +7,7 @@ package br.senai.sc.sisloja;
 
 import br.senai.sc.sisloj.views.CadastroCliente;
 import br.senai.sc.sisloj.views.dashboard;
+import br.senai.sc.sisloj.views.listagemCliente;
 import br.senai.sc.sisloj.views.painelAmarelo;
 import br.senai.sc.sisloj.views.painelRosa;
 import java.awt.CardLayout;
@@ -30,12 +31,15 @@ public class SisLojFrame extends javax.swing.JFrame {
         painelAmarelo pAmarelo = new painelAmarelo();
         CadastroCliente pCadastroCliente = new CadastroCliente(); 
         dashboard pdb = new dashboard();
+        listagemCliente lc = new listagemCliente(); 
         
         //painelPrincipal.add(pAmarelo, "painelAmarelo");
        // painelPrincipal.add(pRosa, "painelRosa");
        
         painelPrincipal.add(pdb, "painelDashboard");
         painelPrincipal.add(pCadastroCliente, "painelCadastroCliente");
+        painelPrincipal.add(lc, "listagemCliente");
+        
         
         //this.setExtendedState(MAXIMIZED_BOTH);
         
@@ -71,7 +75,7 @@ public class SisLojFrame extends javax.swing.JFrame {
 
         menCliente.setText("Cliente");
 
-        menCadastrarCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
+        menCadastrarCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
         menCadastrarCliente.setText("Cadastrar cliente");
         menCadastrarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,8 +84,13 @@ public class SisLojFrame extends javax.swing.JFrame {
         });
         menCliente.add(menCadastrarCliente);
 
-        menListarCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
+        menListarCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, 0));
         menListarCliente.setText("Listar clientes ");
+        menListarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menListarClienteActionPerformed(evt);
+            }
+        });
         menCliente.add(menListarCliente);
 
         barraDeMenu.add(menCliente);
@@ -165,6 +174,11 @@ public class SisLojFrame extends javax.swing.JFrame {
     private void nenhum(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_nenhum
         // TODO add your handling code here:
     }//GEN-LAST:event_nenhum
+
+    private void menListarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListarClienteActionPerformed
+        CardLayout cl = (CardLayout) painelPrincipal.getLayout();
+        cl.show(painelPrincipal, "listagemCliente");
+    }//GEN-LAST:event_menListarClienteActionPerformed
 
     /**
      * @param args the command line arguments
